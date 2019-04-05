@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kc2-fK-kRl">
+                                <rect key="frame" x="24" y="46" width="59" height="30"/>
+                                <color key="backgroundColor" red="0.35686274509999999" green="0.71764705880000002" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Previous"/>
+                                <connections>
+                                    <action selector="previousTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RxX-Pc-J6l"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="ifo-fB-9XE" customClass="UICustomProgressBar">
+                                <rect key="frame" x="24" y="155" width="327" height="2.5"/>
+                                <color key="progressTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="trackTintColor" red="0.43137254899999999" green="0.43137254899999999" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lu9-Xc-77M">
+                                <rect key="frame" x="319" y="46" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gdg-au-hem"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.78058209199999995" green="0.78058209199999995" blue="0.78058209199999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Kc2-fK-kRl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="8YW-Nl-jpt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ifo-fB-9XE" secondAttribute="trailing" constant="8" id="EMs-PH-ASy"/>
+                            <constraint firstItem="lu9-Xc-77M" firstAttribute="leading" secondItem="Kc2-fK-kRl" secondAttribute="trailing" constant="236" id="S1v-2J-eet"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lu9-Xc-77M" secondAttribute="trailing" constant="24" id="aHv-XU-1qr"/>
+                            <constraint firstItem="lu9-Xc-77M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="26" id="gzS-tB-G6b"/>
+                            <constraint firstItem="Kc2-fK-kRl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="26" id="kN7-1i-wrO"/>
+                            <constraint firstItem="ifo-fB-9XE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="135" id="ozA-Nj-cwC"/>
+                            <constraint firstItem="ifo-fB-9XE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="vYx-vx-rOn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="customProgressBar" destination="ifo-fB-9XE" id="1DM-q5-zVy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
